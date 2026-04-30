@@ -65,8 +65,8 @@
         </div>
 
         <div class="hero__right">
-          <div class="mediaCard mediaCard--tall">
-            <img class="mediaCard__img" src="assets/cover.webp" alt="Case study cover image" />
+          <div class="mediaCard mediaCard--cover">
+            <img class="mediaCard__img mediaCard__img--cover" src="assets/cover.webp" alt="Case study cover image" />
           </div>
         </div>
       </div>
@@ -149,8 +149,8 @@
             After synthesizing the research, I organized a simplified ticket purchase flow. The goal was to minimize pages while
             keeping users oriented in their progress.
           </p>
-          <div class="mediaCard mediaCard--wide">
-            <img class="mediaCard__img mediaCard__img--contain" src="assets/taskflow.png" alt="Task flow" />
+          <div class="mediaCard">
+            <img class="mediaCard__img" src="assets/taskflow.png" alt="Task flow" />
           </div>
         </div>
 
@@ -161,12 +161,8 @@
             and keep one clear screen per major process step.
           </p>
           <div class="mediaGrid">
-            <div class="mediaCard">
-              <img class="mediaCard__img mediaCard__img--contain" src="assets/lowfi_1.png" alt="Low fidelity screens 1" />
-            </div>
-            <div class="mediaCard">
-              <img class="mediaCard__img mediaCard__img--contain" src="assets/lowfi_2.png" alt="Low fidelity screens 2" />
-            </div>
+            <div class="mediaCard"><img class="mediaCard__img" src="assets/lowfi_1.png" alt="Low fidelity screens 1" /></div>
+            <div class="mediaCard"><img class="mediaCard__img" src="assets/lowfi_2.png" alt="Low fidelity screens 2" /></div>
           </div>
         </div>
 
@@ -177,12 +173,8 @@
             or too much color, so the flow stayed calm and readable.
           </p>
           <div class="mediaGrid">
-            <div class="mediaCard">
-              <img class="mediaCard__img mediaCard__img--contain" src="assets/midfi_1.png" alt="Mid fidelity screens 1" />
-            </div>
-            <div class="mediaCard">
-              <img class="mediaCard__img mediaCard__img--contain" src="assets/midfi_2.png" alt="Mid fidelity screens 2" />
-            </div>
+            <div class="mediaCard"><img class="mediaCard__img" src="assets/midfi_1.png" alt="Mid fidelity screens 1" /></div>
+            <div class="mediaCard"><img class="mediaCard__img" src="assets/midfi_2.png" alt="Mid fidelity screens 2" /></div>
           </div>
         </div>
 
@@ -194,47 +186,66 @@
           </p>
 
           <div class="row">
-            <a class="btn btn--primary" href="#" target="_blank" rel="noreferrer">Prototype link</a>
-            <span class="muted small">Replace with your Figma prototype link.</span>
+            <a class="btn btn--primary" href="https://www.figma.com/proto/JfhYOBqy2jt1M5iah5c5vQ/UX1-Spring-2026-Figma-File-Template?node-id=1-52&p=f&t=Oe1OsfgTaafsyOli-0&scaling=min-zoom&content-scaling=fixed&page-id=1%3A45&starting-point-node-id=1%3A52" target="_blank" rel="noreferrer">Prototype link</a>
           </div>
 
-          <!-- Gallery: add as many V1 images as you want -->
+          <!-- V1 GALLERY (4 slots) -->
           <div class="gallery" data-gallery>
             <button class="gallery__btn" data-prev aria-label="Previous">‹</button>
-
             <div class="gallery__viewport">
               <div class="gallery__track" data-track>
                 <div class="gallery__slide"><img src="assets/hifi_v1_1.png" alt="High-fi V1 1"></div>
                 <div class="gallery__slide"><img src="assets/hifi_v1_2.png" alt="High-fi V1 2"></div>
-                <!-- add more like this -->
-                <!-- <div class="gallery__slide"><img src="assets/hifi_v1_3.png" alt="High-fi V1 3"></div> -->
-                <!-- <div class="gallery__slide"><img src="assets/hifi_v1_4.png" alt="High-fi V1 4"></div> -->
+                <div class="gallery__slide"><img src="assets/hifi_v1_3.png" alt="High-fi V1 3"></div>
+                <div class="gallery__slide"><img src="assets/hifi_v1_4.png" alt="High-fi V1 4"></div>
               </div>
             </div>
-
             <button class="gallery__btn" data-next aria-label="Next">›</button>
           </div>
         </div>
 
+        <!-- UPDATED: feedback as organized bullet list -->
         <div class="card">
           <h3 class="h3">Instructor feedback + user testing (V1 → V2)</h3>
-          <p>
-            Between V1 and V2, I received instructor feedback and ran additional user testing.
-            The main direction was to make the site feel more complete and zoo-specific, improve timed entry clarity,
-            make pricing more obvious, and strengthen trust cues through consistent layout and details.
-          </p>
 
-          <div class="gallery gallery--short" data-gallery>
-            <button class="gallery__btn" data-prev aria-label="Previous">‹</button>
-
-            <div class="gallery__viewport">
-              <div class="gallery__track" data-track>
-                <div class="gallery__slide"><img src="assets/feedback_instructor.png" alt="Instructor feedback"></div>
-                <div class="gallery__slide"><img src="assets/feedback_user_testing.png" alt="User testing notes"></div>
-              </div>
+          <div class="listGrid">
+            <div class="listBlock">
+              <div class="listTitle">User feedback</div>
+              <ul class="cleanList">
+                <li>Timed entry needed one simple sentence so people know what the time means.</li>
+                <li>Pricing breakdown should show earlier and stay consistent through checkout.</li>
+                <li>Edit actions (date/time and quantity) should be more obvious and feel “safe.”</li>
+                <li>Checkout and payment should feel more official with small trust cues.</li>
+                <li>Animals page needed clearer browsing tools like search and basic filters.</li>
+              </ul>
             </div>
 
-            <button class="gallery__btn" data-next aria-label="Next">›</button>
+            <div class="listBlock">
+              <div class="listTitle">Instructor feedback</div>
+              <ul class="cleanList">
+                <li>Layout consistency: align to grid and keep spacing consistent across screens.</li>
+                <li>Hierarchy: make primary actions more noticeable and keep buttons consistent.</li>
+                <li>Reduce awkward whitespace and keep sections balanced.</li>
+                <li>Make text formatting consistent (headers, labels, body sizing).</li>
+                <li>Improve overall “fit and finish” so the prototype feels complete.</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="listBlock listBlock--full">
+            <div class="listTitle">UI standards I focused on for V2</div>
+            <ul class="cleanList">
+              <li><b>Color + contrast:</b> kept a restrained palette and made sure text/buttons stayed readable.</li>
+              <li><b>Spacing:</b> used consistent spacing increments and matched spacing between sections on each screen.</li>
+              <li><b>Typography:</b> consistent header/body sizes, left-aligned body text, no random capitalization.</li>
+              <li><b>Buttons:</b> consistent height and padding; primary vs secondary only changed by color.</li>
+              <li><b>Inputs:</b> matched input height to buttons, consistent corner radius, consistent left padding.</li>
+              <li><b>Components:</b> kept consistent rounded corners, consistent icon sizing, and predictable layouts.</li>
+            </ul>
+          </div>
+
+          <div class="mediaGrid">
+            
           </div>
         </div>
 
@@ -246,21 +257,17 @@
             and made edit actions more obvious so users feel safe changing date/time or quantity.
           </p>
 
-          <!-- Gallery: add as many V2 images as you want -->
+          <!-- V2 GALLERY (4 slots) -->
           <div class="gallery" data-gallery>
             <button class="gallery__btn" data-prev aria-label="Previous">‹</button>
-
             <div class="gallery__viewport">
               <div class="gallery__track" data-track>
                 <div class="gallery__slide"><img src="assets/hifi_v2_1.png" alt="High-fi V2 1"></div>
                 <div class="gallery__slide"><img src="assets/hifi_v2_2.png" alt="High-fi V2 2"></div>
-                <!-- add more like this -->
-                <!-- <div class="gallery__slide"><img src="assets/hifi_v2_3.png" alt="High-fi V2 3"></div> -->
-                <!-- <div class="gallery__slide"><img src="assets/hifi_v2_4.png" alt="High-fi V2 4"></div> -->
-                <!-- <div class="gallery__slide"><img src="assets/hifi_v2_5.png" alt="High-fi V2 5"></div> -->
+                <div class="gallery__slide"><img src="assets/hifi_v2_3.png" alt="High-fi V2 3"></div>
+                <div class="gallery__slide"><img src="assets/hifi_v2_4.png" alt="High-fi V2 4"></div>
               </div>
             </div>
-
             <button class="gallery__btn" data-next aria-label="Next">›</button>
           </div>
         </div>
@@ -272,7 +279,7 @@
             with clear sections, and later more visual content and browsing tools.
           </p>
           <div class="mediaCard">
-            <img class="mediaCard__img mediaCard__img--contain" src="assets/animals_page.png" alt="Animals page" />
+            <img class="mediaCard__img" src="assets/animals_page.png" alt="Animals page" />
           </div>
         </div>
       </div>

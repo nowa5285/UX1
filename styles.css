@@ -12,14 +12,13 @@
   --shadow: 0 16px 48px rgba(15,15,14,.10);
 
   --radius: 16px;
-  --radiusSm: 12px;
-
   --max: 1120px;
   --gutter: 24px;
 }
 
 *{ box-sizing:border-box; }
 html{ scroll-behavior:smooth; }
+
 body{
   margin:0;
   background: var(--bg);
@@ -35,7 +34,6 @@ body{
 
 .section{ padding: 56px 0; }
 .section--hero{ padding-top: 32px; }
-
 .section__header{ margin-bottom: 18px; }
 
 .h1{
@@ -166,33 +164,31 @@ body{
   .mediaGrid{ grid-template-columns:1fr; }
 }
 
-/* images: NO captions, clean fill */
+/* images (FULL + readable) */
 .mediaCard{
   border: 1px solid var(--line);
   border-radius: var(--radius);
   overflow: hidden;
   background: rgba(111,69,0,.06);
 }
-.mediaCard--tall .mediaCard__img{
-  min-height: 420px;
-}
-.mediaCard--wide .mediaCard__img{
-  min-height: 360px;
-}
 
 .mediaCard__img{
   width: 100%;
-  height: 100%;
-  min-height: 320px;
-  object-fit: cover;
+  height: auto;
   display: block;
-  background: rgba(111,69,0,.10);
-}
-
-/* for screenshots you don't want cropped */
-.mediaCard__img--contain{
   object-fit: contain;
   background: rgba(255,255,255,.72);
+}
+
+/* cover can still be “hero-style” */
+.mediaCard--cover{
+  height: 420px;
+}
+.mediaCard__img--cover{
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  background: rgba(111,69,0,.10);
 }
 
 /* callout */
@@ -237,14 +233,8 @@ body{
   font-size: 16px;
   user-select:none;
 }
-.btn--primary{
-  background: var(--accent);
-  color: var(--lightText);
-}
-.btn--secondary{
-  background: var(--secondaryBtn);
-  color: var(--lightText);
-}
+.btn--primary{ background: var(--accent); color: var(--lightText); }
+.btn--secondary{ background: var(--secondaryBtn); color: var(--lightText); }
 
 /* footer */
 .end{
@@ -253,17 +243,10 @@ body{
   align-items:center;
   gap: 12px;
 }
-.end__line{
-  height: 1px;
-  flex: 1;
-  background: var(--line);
-}
-.end__text{
-  font-size: 13px;
-  color: rgba(104,80,58,.78);
-}
+.end__line{ height: 1px; flex: 1; background: var(--line); }
+.end__text{ font-size: 13px; color: rgba(104,80,58,.78); }
 
-/* --- GALLERY / CAROUSEL (multi) --- */
+/* gallery */
 .gallery{
   display: grid;
   grid-template-columns: 44px 1fr 44px;
@@ -271,7 +254,6 @@ body{
   align-items: center;
   margin-top: 12px;
 }
-
 .gallery__btn{
   height: 44px;
   width: 44px;
@@ -282,39 +264,76 @@ body{
   font-size: 26px;
   cursor: pointer;
 }
-
 .gallery__viewport{
   overflow: hidden;
   border-radius: var(--radius);
   border: 1px solid var(--line);
   background: rgba(111,69,0,.06);
 }
-
 .gallery__track{
   display: flex;
   transition: transform .35s ease;
 }
-
 .gallery__slide{
   min-width: 100%;
   padding: 12px;
 }
-
 .gallery__slide img{
   width: 100%;
-  height: 440px;
+  height: 520px;
   object-fit: contain;
   display: block;
-  background: rgba(255,255,255,.68);
+  background: rgba(255,255,255,.72);
   border-radius: 14px;
   border: 1px solid rgba(104,80,58,.22);
 }
-
-.gallery--short .gallery__slide img{
-  height: 340px;
+@media (max-width: 900px){
+  .gallery__slide img{ height: 360px; }
 }
 
-/* --- LEFT HOVER NAV --- */
+/* NEW: feedback lists */
+.listGrid{
+  display:grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  margin-top: 10px;
+}
+@media (max-width: 900px){
+  .listGrid{ grid-template-columns: 1fr; }
+}
+
+.listBlock{
+  border: 1px solid rgba(104,80,58,.18);
+  border-radius: 14px;
+  background: rgba(111,69,0,.06);
+  padding: 14px;
+}
+
+.listBlock--full{
+  margin-top: 12px;
+}
+
+.listTitle{
+  font-weight: 900;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  font-size: 12px;
+  color: rgba(104,80,58,.86);
+  margin-bottom: 10px;
+}
+
+.cleanList{
+  margin: 0;
+  padding-left: 18px;
+  display:grid;
+  gap: 8px;
+}
+.cleanList li{
+  line-height: 1.5;
+  color: rgba(15,15,14,.86);
+}
+
+/* LEFT HOVER NAV */
 .rail{
   position: fixed;
   top: 22%;
@@ -333,7 +352,6 @@ body{
   height: 100vh;
 }
 
-/* bounce/nudge so users notice */
 .rail__tab{
   display:flex;
   align-items:center;
@@ -379,7 +397,6 @@ body{
   padding: 14px 0;
 }
 
-/* open when hovering rail OR hovering the left edge */
 .rail:hover .rail__panel{
   width: 210px;
   transform: translateX(0);
