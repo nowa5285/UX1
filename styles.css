@@ -164,14 +164,13 @@ body{
   .mediaGrid{ grid-template-columns:1fr; }
 }
 
-/* images (FULL + readable) */
+/* images */
 .mediaCard{
   border: 1px solid var(--line);
   border-radius: var(--radius);
   overflow: hidden;
   background: rgba(111,69,0,.06);
 }
-
 .mediaCard__img{
   width: 100%;
   height: auto;
@@ -180,10 +179,8 @@ body{
   background: rgba(255,255,255,.72);
 }
 
-/* cover can still be “hero-style” */
-.mediaCard--cover{
-  height: 420px;
-}
+/* cover */
+.mediaCard--cover{ height: 420px; }
 .mediaCard__img--cover{
   height: 100%;
   width: 100%;
@@ -291,7 +288,7 @@ body{
   .gallery__slide img{ height: 360px; }
 }
 
-/* NEW: feedback lists */
+/* lists (feedback) */
 .listGrid{
   display:grid;
   grid-template-columns: 1fr 1fr;
@@ -299,20 +296,17 @@ body{
   margin-top: 10px;
 }
 @media (max-width: 900px){
-  .listGrid{ grid-template-columns: 1fr; }
+  .listGrid{ grid-template-columns:1fr; }
 }
-
 .listBlock{
   border: 1px solid rgba(104,80,58,.18);
   border-radius: 14px;
   background: rgba(111,69,0,.06);
   padding: 14px;
 }
-
 .listBlock--full{
   margin-top: 12px;
 }
-
 .listTitle{
   font-weight: 900;
   letter-spacing: .08em;
@@ -321,7 +315,6 @@ body{
   color: rgba(104,80,58,.86);
   margin-bottom: 10px;
 }
-
 .cleanList{
   margin: 0;
   padding-left: 18px;
@@ -340,7 +333,7 @@ body{
   left: 10px;
   z-index: 50;
   display:flex;
-  align-items: center;
+  align-items: flex-start;
   gap: 10px;
 }
 
@@ -426,4 +419,37 @@ body{
 .rail__link.is-active{
   border-left-color: var(--accent);
   background: rgba(184,95,0,.12);
+}
+
+/* MUSIC BUTTON (absolute so it does not expand/push the nav) */
+.rail{
+  position: fixed;
+}
+.rail__music{
+  position: absolute;
+  left: 0;
+  top: 54px;
+  height: 34px;
+  padding: 0 10px;
+  border-radius: 999px;
+  border: 1px solid var(--line);
+  background: rgba(255,255,255,.92);
+  backdrop-filter: blur(8px);
+  box-shadow: var(--shadow);
+  font-weight: 900;
+  font-size: 12px;
+  letter-spacing: .06em;
+  color: rgba(104,80,58,.92);
+  cursor: pointer;
+  z-index: 49;
+  transition: transform .12s ease, background .12s ease, border-color .12s ease;
+}
+.rail__music:hover{
+  transform: translateX(7px);
+  background: rgba(184,95,0,.10);
+}
+.rail__music.is-on{
+  border-color: rgba(184,95,0,.45);
+  background: rgba(184,95,0,.12);
+  color: rgba(15,15,14,.92);
 }

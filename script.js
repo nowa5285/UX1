@@ -50,3 +50,38 @@ document.querySelectorAll("[data-gallery]").forEach((gallery) => {
 
   update();
 });
+
+
+// music toggle
+const musicBtn = document.getElementById("musicToggle");
+const music = document.getElementById("bgMusic");
+
+if (musicBtn && music) {
+  const setUI = (on) => {
+    musicBtn.classList.toggle("is-on", on);
+    musicBtn.setAttribute("aria-pressed", on ? "true" : "false");
+    musicBtn.textContent = on ? "♪ Music: On" : "♪ Music: Off";
+  };
+
+  let on = false;
+  setUI(false);
+
+  musicBtn.addEventListener("click", async () => {
+    try {
+      if (!on) {
+        music.volume = 0.35;
+        await music.play();
+        on = true;
+        setUI(true);
+      } else {
+        music.pause();
+        on = false;
+        setUI(false);
+      }
+    } catch (e) {
+      on = false;
+      setUI(false);
+      console.warn("Music could not play. Check assets/music.mp3 exists.", e);
+    }
+  });
+}

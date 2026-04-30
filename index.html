@@ -22,6 +22,16 @@
       <span class="rail__tabLabel">CASE STUDY</span>
     </div>
 
+    <!-- music toggle under the tab (positioned so it doesn't change width) -->
+    <button class="rail__music" type="button" id="musicToggle" aria-pressed="false">
+      ♪ Music: Off
+    </button>
+
+    <!-- hidden audio -->
+    <audio id="bgMusic" preload="auto" loop>
+      <source src="assets/music.mp3" type="audio/mpeg">
+    </audio>
+
     <nav class="rail__panel">
       <div class="rail__title">Noah Wagner</div>
       <a class="rail__link" href="#top" data-section="top">Top</a>
@@ -169,8 +179,10 @@
         <div class="card">
           <h3 class="h3">Mid fidelity</h3>
           <p>
-            In mid fidelity, I tested components, spacing, and hierarchy. I wanted a sleek interface that didn’t overuse bold buttons
-            or too much color, so the flow stayed calm and readable.
+            In mid fidelity, I started treating the screens like a real product instead of a sketch. I built out repeatable components
+            (cards, step indicators, summaries, and form blocks) and made sure the same patterns repeated across the full flow.
+            This stage was where I tightened spacing and alignment, tested button hierarchy, and made the form layout feel clean and predictable.
+            The goal was sleek and modern, but still calm and readable, without overly “poppy” UI.
           </p>
           <div class="mediaGrid">
             <div class="mediaCard"><img class="mediaCard__img" src="assets/midfi_1.png" alt="Mid fidelity screens 1" /></div>
@@ -181,15 +193,16 @@
         <div class="card">
           <h3 class="h3">High fidelity interactive prototype (V1)</h3>
           <p>
-            For High Fidelity V1, I applied the rustic-modern palette and finalized the overall layout across the homepage,
-            ticket flow, and Animals page. The goal was to see how the real styling and flow felt without overusing color.
+            For High Fidelity V1, I applied my rustic-modern visual direction and tested how the full flow felt with real UI decisions.
+            I focused on readable typography, clear hierarchy, and restrained color so the experience stayed clean.
+            This version made it obvious where the design still felt a little empty or “template-like,” and it gave me a strong base to improve
+            clarity (timed entry + pricing) and confidence (trust cues + edit actions) in V2.
           </p>
 
           <div class="row">
             <a class="btn btn--primary" href="https://www.figma.com/proto/JfhYOBqy2jt1M5iah5c5vQ/UX1-Spring-2026-Figma-File-Template?node-id=1-52&p=f&t=Oe1OsfgTaafsyOli-0&scaling=min-zoom&content-scaling=fixed&page-id=1%3A45&starting-point-node-id=1%3A52" target="_blank" rel="noreferrer">Prototype link</a>
           </div>
 
-          <!-- V1 GALLERY (4 slots) -->
           <div class="gallery" data-gallery>
             <button class="gallery__btn" data-prev aria-label="Previous">‹</button>
             <div class="gallery__viewport">
@@ -204,7 +217,6 @@
           </div>
         </div>
 
-        <!-- UPDATED: feedback as organized bullet list -->
         <div class="card">
           <h3 class="h3">Instructor feedback + user testing (V1 → V2)</h3>
 
@@ -227,7 +239,7 @@
                 <li>Hierarchy: make primary actions more noticeable and keep buttons consistent.</li>
                 <li>Reduce awkward whitespace and keep sections balanced.</li>
                 <li>Make text formatting consistent (headers, labels, body sizing).</li>
-                <li>Improve overall “fit and finish” so the prototype feels complete.</li>
+                <li>Improve overall fit and finish so the prototype feels complete.</li>
               </ul>
             </div>
           </div>
@@ -235,29 +247,26 @@
           <div class="listBlock listBlock--full">
             <div class="listTitle">UI standards I focused on for V2</div>
             <ul class="cleanList">
-              <li><b>Color + contrast:</b> kept a restrained palette and made sure text/buttons stayed readable.</li>
-              <li><b>Spacing:</b> used consistent spacing increments and matched spacing between sections on each screen.</li>
-              <li><b>Typography:</b> consistent header/body sizes, left-aligned body text, no random capitalization.</li>
-              <li><b>Buttons:</b> consistent height and padding; primary vs secondary only changed by color.</li>
-              <li><b>Inputs:</b> matched input height to buttons, consistent corner radius, consistent left padding.</li>
-              <li><b>Components:</b> kept consistent rounded corners, consistent icon sizing, and predictable layouts.</li>
+              <li><b>Color + contrast:</b> restrained palette, readable text, and clear button states.</li>
+              <li><b>Spacing:</b> consistent spacing increments and consistent section rhythm.</li>
+              <li><b>Typography:</b> consistent header/body sizing, left alignment, clean labels.</li>
+              <li><b>Buttons:</b> consistent height + padding; primary vs secondary only differs by color.</li>
+              <li><b>Inputs:</b> match input height to buttons; consistent radius + left padding; clear labels.</li>
+              <li><b>Components:</b> consistent rounding, consistent icon sizing, predictable layouts.</li>
             </ul>
-          </div>
-
-          <div class="mediaGrid">
-            
           </div>
         </div>
 
         <div class="card">
           <h3 class="h3">Final High Fidelity (V2)</h3>
           <p>
-            V2 focused on finishing the missing pieces while keeping the same modern structure.
-            I improved zoo-specific content and clarity, strengthened timed entry messaging, made pricing breakdown more consistent,
-            and made edit actions more obvious so users feel safe changing date/time or quantity.
+            V2 was a refinement pass focused on completeness and confidence. I tightened spacing and alignment, clarified the timed entry explanation,
+            and made pricing more consistent across the flow so the total never feels like a surprise.
+            I also made edit actions more obvious so users can change date/time or quantity without feeling like they have to restart.
+            Overall, I tried to keep the modern structure but add the small details that make the experience feel finished and more “zoo.”
           </p>
 
-          <!-- V2 GALLERY (4 slots) -->
+          <!-- V2 now has 6 slots -->
           <div class="gallery" data-gallery>
             <button class="gallery__btn" data-prev aria-label="Previous">‹</button>
             <div class="gallery__viewport">
@@ -266,6 +275,8 @@
                 <div class="gallery__slide"><img src="assets/hifi_v2_2.png" alt="High-fi V2 2"></div>
                 <div class="gallery__slide"><img src="assets/hifi_v2_3.png" alt="High-fi V2 3"></div>
                 <div class="gallery__slide"><img src="assets/hifi_v2_4.png" alt="High-fi V2 4"></div>
+                <div class="gallery__slide"><img src="assets/hifi_v2_5.png" alt="High-fi V2 5"></div>
+                
               </div>
             </div>
             <button class="gallery__btn" data-next aria-label="Next">›</button>
