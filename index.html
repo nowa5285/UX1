@@ -1,0 +1,351 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Cheyenne Mountain Zoo Redesign | Noah Wagner</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bree+Serif&family=Source+Sans+3:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+  <!-- LEFT HOVER NAV -->
+  <aside class="rail" aria-label="Section navigation">
+    <div class="rail__edge" aria-hidden="true"></div>
+
+    <div class="rail__tab" title="Open navigation">
+      <span class="rail__tabDot"></span>
+      <span class="rail__tabLabel">CASE STUDY</span>
+    </div>
+
+    <nav class="rail__panel">
+      <div class="rail__title">Noah Wagner</div>
+      <a class="rail__link" href="#top" data-section="top">Top</a>
+      <a class="rail__link" href="#challenge" data-section="challenge">Challenge</a>
+      <a class="rail__link" href="#research" data-section="research">Research</a>
+      <a class="rail__link" href="#design" data-section="design">Design</a>
+      <a class="rail__link" href="#evaluation" data-section="evaluation">Evaluation</a>
+      <a class="rail__link" href="#reflection" data-section="reflection">Reflection</a>
+    </nav>
+  </aside>
+
+  <main class="page" id="top">
+    <!-- INTRO / TOP -->
+    <section class="section section--hero">
+      <div class="hero">
+        <div class="hero__left">
+          <h1 class="h1">Cheyenne Mountain Zoo<br/>Redesign</h1>
+
+          <div class="meta">
+            <div class="meta__row"><span class="meta__k">IN PROGRESS</span></div>
+            <div class="meta__row"><span class="meta__k">ROLE:</span> <span class="meta__v">User Experience Designer / Researcher</span></div>
+            <div class="meta__row"><span class="meta__k">TIMELINE:</span> <span class="meta__v">Spring 2026</span></div>
+            <div class="meta__row"><span class="meta__k">SKILLS:</span> <span class="meta__v">Product Design, Interaction Design, Prototyping, User Research</span></div>
+          </div>
+
+          <p class="lead">
+            As part of User Experience Design 1 at CU Boulder, I redesigned key parts of the Cheyenne Mountain Zoo website.
+            The original experience made it hard to find and buy tickets, especially with timed entry and multiple ticket types.
+            My redesign focused on clearer hierarchy, simpler steps, and a rustic-modern look that still feels like a zoo.
+          </p>
+
+          <p class="tight">
+            I worked independently as the designer and UX researcher. As a designer, I created low, mid, and high fidelity prototypes in Figma.
+            As a researcher, I ran usability tests on the current site and again between High-Fidelity V1 and V2.
+          </p>
+
+          <div class="hero__ctaRow">
+            <a class="btn btn--primary" href="#design">Jump to design</a>
+            <a class="btn btn--secondary" href="#evaluation">Jump to results</a>
+          </div>
+        </div>
+
+        <div class="hero__right">
+          <div class="mediaCard mediaCard--tall">
+            <img class="mediaCard__img" src="assets/cover.webp" alt="Case study cover image" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CHALLENGE -->
+    <section id="challenge" class="section">
+      <header class="section__header">
+        <h2 class="h2Big">Challenge</h2>
+      </header>
+
+      <div class="card">
+        <p>
+          For the Cheyenne Mountain Zoo, I aimed to solve the flow of finding and purchasing tickets.
+          The current experience was convoluted and often led to confusing ends. A limitation of this project was designing
+          around the existing constraints for ticket purchasing, including membership status and different ticket types.
+        </p>
+      </div>
+    </section>
+
+    <!-- RESEARCH -->
+    <section id="research" class="section">
+      <header class="section__header">
+        <h2 class="h2Big">Research</h2>
+      </header>
+
+      <div class="timeline">
+        <div class="tDot"></div>
+        <div class="tLine"></div>
+
+        <div class="card">
+          <h3 class="h3">Usability testing of current experience</h3>
+          <p>
+            Before redesigning, I conducted usability tests on the current ticket experience.
+            I captured confusion points, moments of hesitation, and where users lost confidence.
+            The largest pain points were how long it took to reach tickets and how unclear timed entry and pricing could feel.
+          </p>
+
+          <div class="mediaGrid">
+            <div class="mediaCard">
+              <img class="mediaCard__img" src="assets/research_usability.png" alt="Usability testing image" />
+            </div>
+            <div class="mediaCard">
+              <img class="mediaCard__img" src="assets/research_affinity.png" alt="Affinity map image" />
+            </div>
+          </div>
+
+          <div class="callout">
+            <div class="callout__label">How might we</div>
+            <div class="callout__text">
+              How might we create an updated ticket purchasing experience that clearly separates membership options and
+              helps users confidently choose the right ticket for a timed visit?
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- DESIGN -->
+    <section id="design" class="section">
+      <header class="section__header">
+        <h2 class="h2Big">Design</h2>
+      </header>
+
+      <div class="timeline">
+        <div class="tDot"></div>
+        <div class="tLine"></div>
+
+        <div class="card">
+          <h3 class="h3">Problem statement</h3>
+          <p>
+            Non-member visitors need a fast, easy-to-scan way to select a timed ticket by date, time, and quantity
+            and see the full price upfront in order to feel confident purchasing without confusion or surprise fees.
+          </p>
+        </div>
+
+        <div class="card">
+          <h3 class="h3">Task flow</h3>
+          <p>
+            After synthesizing the research, I organized a simplified ticket purchase flow. The goal was to minimize pages while
+            keeping users oriented in their progress.
+          </p>
+          <div class="mediaCard mediaCard--wide">
+            <img class="mediaCard__img mediaCard__img--contain" src="assets/taskflow.png" alt="Task flow" />
+          </div>
+        </div>
+
+        <div class="card">
+          <h3 class="h3">Low fidelity</h3>
+          <p>
+            In low fidelity, I focused on minimal layout and less text. I used quick sketches to lock in the structure of the flow
+            and keep one clear screen per major process step.
+          </p>
+          <div class="mediaGrid">
+            <div class="mediaCard">
+              <img class="mediaCard__img mediaCard__img--contain" src="assets/lowfi_1.png" alt="Low fidelity screens 1" />
+            </div>
+            <div class="mediaCard">
+              <img class="mediaCard__img mediaCard__img--contain" src="assets/lowfi_2.png" alt="Low fidelity screens 2" />
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <h3 class="h3">Mid fidelity</h3>
+          <p>
+            In mid fidelity, I tested components, spacing, and hierarchy. I wanted a sleek interface that didn’t overuse bold buttons
+            or too much color, so the flow stayed calm and readable.
+          </p>
+          <div class="mediaGrid">
+            <div class="mediaCard">
+              <img class="mediaCard__img mediaCard__img--contain" src="assets/midfi_1.png" alt="Mid fidelity screens 1" />
+            </div>
+            <div class="mediaCard">
+              <img class="mediaCard__img mediaCard__img--contain" src="assets/midfi_2.png" alt="Mid fidelity screens 2" />
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <h3 class="h3">High fidelity interactive prototype (V1)</h3>
+          <p>
+            For High Fidelity V1, I applied the rustic-modern palette and finalized the overall layout across the homepage,
+            ticket flow, and Animals page. The goal was to see how the real styling and flow felt without overusing color.
+          </p>
+
+          <div class="row">
+            <a class="btn btn--primary" href="#" target="_blank" rel="noreferrer">Prototype link</a>
+            <span class="muted small">Replace with your Figma prototype link.</span>
+          </div>
+
+          <!-- Gallery: add as many V1 images as you want -->
+          <div class="gallery" data-gallery>
+            <button class="gallery__btn" data-prev aria-label="Previous">‹</button>
+
+            <div class="gallery__viewport">
+              <div class="gallery__track" data-track>
+                <div class="gallery__slide"><img src="assets/hifi_v1_1.png" alt="High-fi V1 1"></div>
+                <div class="gallery__slide"><img src="assets/hifi_v1_2.png" alt="High-fi V1 2"></div>
+                <!-- add more like this -->
+                <!-- <div class="gallery__slide"><img src="assets/hifi_v1_3.png" alt="High-fi V1 3"></div> -->
+                <!-- <div class="gallery__slide"><img src="assets/hifi_v1_4.png" alt="High-fi V1 4"></div> -->
+              </div>
+            </div>
+
+            <button class="gallery__btn" data-next aria-label="Next">›</button>
+          </div>
+        </div>
+
+        <div class="card">
+          <h3 class="h3">Instructor feedback + user testing (V1 → V2)</h3>
+          <p>
+            Between V1 and V2, I received instructor feedback and ran additional user testing.
+            The main direction was to make the site feel more complete and zoo-specific, improve timed entry clarity,
+            make pricing more obvious, and strengthen trust cues through consistent layout and details.
+          </p>
+
+          <div class="gallery gallery--short" data-gallery>
+            <button class="gallery__btn" data-prev aria-label="Previous">‹</button>
+
+            <div class="gallery__viewport">
+              <div class="gallery__track" data-track>
+                <div class="gallery__slide"><img src="assets/feedback_instructor.png" alt="Instructor feedback"></div>
+                <div class="gallery__slide"><img src="assets/feedback_user_testing.png" alt="User testing notes"></div>
+              </div>
+            </div>
+
+            <button class="gallery__btn" data-next aria-label="Next">›</button>
+          </div>
+        </div>
+
+        <div class="card">
+          <h3 class="h3">Final High Fidelity (V2)</h3>
+          <p>
+            V2 focused on finishing the missing pieces while keeping the same modern structure.
+            I improved zoo-specific content and clarity, strengthened timed entry messaging, made pricing breakdown more consistent,
+            and made edit actions more obvious so users feel safe changing date/time or quantity.
+          </p>
+
+          <!-- Gallery: add as many V2 images as you want -->
+          <div class="gallery" data-gallery>
+            <button class="gallery__btn" data-prev aria-label="Previous">‹</button>
+
+            <div class="gallery__viewport">
+              <div class="gallery__track" data-track>
+                <div class="gallery__slide"><img src="assets/hifi_v2_1.png" alt="High-fi V2 1"></div>
+                <div class="gallery__slide"><img src="assets/hifi_v2_2.png" alt="High-fi V2 2"></div>
+                <!-- add more like this -->
+                <!-- <div class="gallery__slide"><img src="assets/hifi_v2_3.png" alt="High-fi V2 3"></div> -->
+                <!-- <div class="gallery__slide"><img src="assets/hifi_v2_4.png" alt="High-fi V2 4"></div> -->
+                <!-- <div class="gallery__slide"><img src="assets/hifi_v2_5.png" alt="High-fi V2 5"></div> -->
+              </div>
+            </div>
+
+            <button class="gallery__btn" data-next aria-label="Next">›</button>
+          </div>
+        </div>
+
+        <div class="card">
+          <h3 class="h3">Additional page: Animals</h3>
+          <p>
+            I included an Animals page as an additional screen. The goal was a clean, modern layout that becomes more browseable
+            with clear sections, and later more visual content and browsing tools.
+          </p>
+          <div class="mediaCard">
+            <img class="mediaCard__img mediaCard__img--contain" src="assets/animals_page.png" alt="Animals page" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- EVALUATION -->
+    <section id="evaluation" class="section">
+      <header class="section__header">
+        <h2 class="h2Big">Evaluation and results</h2>
+      </header>
+
+      <div class="timeline">
+        <div class="tDot"></div>
+        <div class="tLine"></div>
+
+        <div class="card">
+          <h3 class="h3">User testing process and pain points</h3>
+          <p>
+            Users said the flow was easy to follow and the layout felt clean, but it still wasn’t quite where I wanted it to be in terms
+            of completeness and “zoo” feeling. The main feedback was that the screens need more content and personality so the site feels
+            more rustic-modern and clearly connected to a zoo, not just a polished template. Timed entry was also slightly unclear, so users
+            wanted one simple sentence explaining what the time means and what happens if you arrive early or late. Pricing came up as well,
+            mostly wanting the breakdown shown sooner and labeled clearly so the total never feels surprising. Checkout and payment worked,
+            but people wanted small trust cues and stronger consistency across the flow so it feels more official.
+          </p>
+        </div>
+
+        <div class="card">
+          <h3 class="h3">Updates</h3>
+          <p>
+            I kept the same modern structure and finished the missing pieces with small but important updates. I improved zoo-specific
+            content and clarity with better image placement, clearer section headers, and small supporting copy. I added a short timed entry line
+            near time selection and repeated it in review to keep expectations clear. I moved the pricing breakdown earlier and kept it consistent
+            across review, cart, and payment with labels for tickets, fees, tax, and total. I made “Edit date/time” and “Edit quantity” more obvious
+            so users can change things without restarting. Finally, I improved the Animals page structure so browsing feels easier.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- REFLECTION -->
+    <section id="reflection" class="section">
+      <header class="section__header">
+        <h2 class="h2Big">Reflection</h2>
+      </header>
+
+      <div class="grid2">
+        <div class="card">
+          <h3 class="h3">Future plans</h3>
+          <p>
+            If I had more time, I would redesign more “visit info” pages like parking and weather protocols, since those rely heavily on UX writing.
+            I would also continue improving content density so the homepage feels complete without becoming overwhelming.
+            Lastly, I would run another round of testing to confirm the V2 clarity updates work the way I intended.
+          </p>
+        </div>
+
+        <div class="card">
+          <h3 class="h3">Conclusion / takeaways</h3>
+          <p>
+            This project reminded me that the coolest creative option is not always the most usable. The ticket purchase flow needs to feel familiar,
+            easy, and confidence-building for users. Iteration mattered a lot here, and small layout and clarity updates made the biggest difference.
+          </p>
+          <p class="muted small">Designer | Researcher | Analyst | Advocate</p>
+        </div>
+      </div>
+
+      <footer class="end">
+        <div class="end__line"></div>
+        <div class="end__text">© Noah Wagner</div>
+      </footer>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
